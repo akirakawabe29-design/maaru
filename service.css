@@ -786,7 +786,10 @@
     grid-template-columns: 1fr;
   }
 
-  .service-scope,
+  .service-scope {
+    grid-template-columns: 1fr;
+  }
+
   .scope-intro,
   .options-heading {
     position: static;
@@ -912,20 +915,42 @@
     padding: 12vh 22px 9vh;
   }
 
+  .scope-intro > p:last-child {
+    margin-top: 32px;
+  }
+
   .options-heading h2 {
     margin-bottom: 34px;
   }
 
+  .scope-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .scope-list li {
-    min-height: 310px;
-    grid-template-columns: 42px 1fr;
-    gap: 18px;
-    align-content: center;
-    padding: 52px 22px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 22px;
+    padding: 34px 22px;
+    border-right: 1px solid rgba(255, 255, 255, 0.16);
+  }
+
+  .scope-list li:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .scope-list h3 {
+    font-size: clamp(20px, 5.4vw, 25px);
+    line-height: 1.45;
   }
 
   .scope-list p {
-    grid-column: 2;
+    font-size: 11px;
+    line-height: 1.8;
   }
 
   .experience-image,
